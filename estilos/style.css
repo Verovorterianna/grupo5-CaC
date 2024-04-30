@@ -15,20 +15,52 @@
     
 }
 
+/*estilos index*/
+.index{
+    background-color: blanchedalmond;
+    height:auto;
+}
+.navbar{
+    display: flex;
+}
 .logo{
-    display: inline-block;
+    width: 20vw;
+    
 }
-.logo>img{
-    width:50%;
-    height:50%;
+.menu ul{
+   /*display: inline-block;
+   margin-top: 50px;
+   margin-bottom: 50px;*/
+   margin:50px;
+   list-style: none;
 }
-.menu{
-   display: inline-block;
-}
-.menu li{
+.menu ul li{
    display:inline;
    margin-right: 20px;
-   text-decoration: none;
+}
+.menu a {
+    text-decoration: none;
+}
+.newcollection{
+    background-image: url(/Media/image/foto\ portada.jpg);
+    width: 100vw;
+    height: 200px;
+    padding: 20px;
+
+    
+}
+.newcollection h1{
+    font-size: 50px;
+    font-style:oblique;
+    text-align: center;
+    padding: 20px;
+    
+
+}
+.main div{
+    display:inline-block;
+    padding:20px;
+    margin:20px;
 }
 
 /* style de pagina de productos empieza aqui*/ 
