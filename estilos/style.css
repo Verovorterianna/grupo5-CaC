@@ -16,31 +16,95 @@
 }
 
 /*estilos index*/
-.index{
-    background-color: blanchedalmond;
-    height:auto;
+
+nav{
+    background: var(--verdeClaro);
+    height: 80px;
+    width: 100%;
 }
-.navbar{
-    display: flex;
+
+.logog5{
+    height: 80px;
 }
-.logo{
-    width: 20vw;
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
     
 }
-.menu ul{
-   /*display: inline-block;
-   margin-top: 50px;
-   margin-bottom: 50px;*/
-   margin:50px;
-   list-style: none;
-}
-.menu ul li{
-   display:inline;
-   margin-right: 20px;
-}
-.menu a {
+nav ul li a{
+    color: var(--beige);
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 3px;
     text-decoration: none;
 }
+li a.active, li a:hover{
+    background: var(--verdeOscuro);
+    transition: .5s;
+}
+.btncheck{
+    font-size: 30px;
+    color: var(--beige);
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .btncheck{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--verdeClaro);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: var(--verdeOscuro);
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+
+
+
+
+
 .newcollection{
     background-image: url(/Media/image/foto\ portada.jpg);
     width: 100vw;
