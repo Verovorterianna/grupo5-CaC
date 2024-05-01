@@ -222,11 +222,11 @@ li a.active, li a:hover{
  /* Aqui termina style de pagina de productos*/   
 
  /* Aqui empieza style de contacto*/   
-.Contacto{
+.contacto{
     font-family: roboto mono;
     background-color: blanchedalmond;
 }
-.Newsletter{
+.newsletter{
     font-family: roboto mono;
     background-color: blanchedalmond;
 }
