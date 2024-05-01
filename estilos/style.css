@@ -220,3 +220,14 @@ li a.active, li a:hover{
     color: var(--beige);
     }  
  /* Aqui termina style de pagina de productos*/   
+
+ /* Aqui empieza style de contacto*/   
+.contacto{
+    font-family: roboto mono;
+    background-color: blanchedalmond;
+}
+.newsletter{
+    font-family: roboto mono;
+    background-color: blanchedalmond;
+}
+/* Aqui termina style de contacto*/ 

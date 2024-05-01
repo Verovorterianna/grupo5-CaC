@@ -8,25 +8,7 @@
 
 </head>
 <body>
-    <style>
-
-        h1 { 
-            color: green
-            
-        }
-
-        h2 {
-            color: green
-        }      
-        
-        body {background-color:aliceblue;
-
-         }  
-
-         p { font-family:Verdana
-
-         }  
-</style>
+    
 <header class="index">
     <div class="navbar">
         <div>
@@ -44,13 +26,13 @@
         </div>
     </div>
 </header>    
-     
-<h1>Contacto</h1>
+<div class="contacto">
+    <h1>Contacto</h1>
 <p>
     Diseñamos todos nuestros productos, tenemos la mejor calidad y todos los talles. <br> Envios a todo el país.
 </p> 
 
-<h2>Redes sociales</h2> 
+     <h2>Redes sociales</h2> 
 
 <p> Podes seguirnos en nuestras redes para ver más contenido
     <a href="https://www.facebook.com/">Facebook </a> Y 
@@ -59,12 +41,12 @@
     <br>
     Nuestro número para contacto por Whatsapp - 1178642022
 
-    <i class="fa-brands fa-facebook"></i>  <!-- Intento poner un icono, desde la pagina web copiando el link y no me aparece en la pantalla -->
-
-
-</p> 
-
-<h2>Suscribite a nuestro newsletter!</h2>
+ </p> 
+    
+</div>
+ 
+<div class="newsletter">
+    <h2>Suscribite a nuestro newsletter!</h2>
     
     <form action="link" method="post">    <!-- No se modifca la tipografia como el resto, por no estar el /p-->
         <label for="name">Nombre:</label>
@@ -80,13 +62,16 @@
         <input type="number" id="phone"placeholder="Ingresá tu número" size="15" maxlength="10" required> 
 
         
-        <p>Dejanos tus comentarios:</p>  <!-- Si elimino el /p se modifica el tamaño del cuadro -->
+        <p>Dejanos tus comentarios:</p>  
         <textarea placeholder="Ingrese su mensaje..." name="coments"  cols="30" rows="10"></textarea>
 
         <br><br>
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
     </form>
+    
+</div>
+
 
    
 </body>
