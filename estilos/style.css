@@ -106,19 +106,41 @@ li a:hover {
   background-size: cover;
   background-position: center;
   height: 60vh;
+  font-size: 8vh;
+  text-shadow: 1px 1px 2px black, 0 0 5px rgb(19, 19, 19);
+  font-style: oblique;
+  
 
 }
-.newcollection h1 {
-  font-size: 50px;
-  font-style: oblique;
+ .newcollection h1 {
   text-align: center;
-  padding: 20px;
+  padding: 50px 50px;
 }
-.main div {
-  display: inline-block;
-  padding: 20px;
-  margin: 20px;
+#categories{
+  text-align: center;
+  padding: 20px 20px;
 }
+#products{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#boxes{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  padding: 50px;
+}
+.change{
+  border-left: rgb(238, 201, 131) solid;
+  border-right: rgb(238, 201, 131) solid;
+}
+#boxes div{
+  padding-right:20px;
+  height: 120px;
+  width: 120px;
+}
+
 
 /* style de pagina de productos empieza aqui*/
 
