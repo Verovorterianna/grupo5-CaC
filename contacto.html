@@ -37,14 +37,14 @@
             Diseñamos todos nuestros productos, tenemos la mejor calidad y todos los talles. <br> Envios a todo el país.
         </p>
 
-        <h2>Redes sociales hola</h2>
+        <h2>Redes sociales</h2>
 
         <p> Podes seguirnos en nuestras redes para ver más contenido
-            <a href="https://www.facebook.com/">Facebook </a> Y
-            <a href="https://www.instagram.com/">Instagram </a>
+            <a href="https://www.facebook.com/">Facebook </a>  <i class="fa-brands fa-facebook"></i> Y
+            <a href="https://www.instagram.com/">Instagram  <i class="fa-brands fa-instagram"></i> </a>
 
             <br>
-            Nuestro número para contacto por Whatsapp - 1178642022
+            Nuestro número para contacto por Whatsapp <i class="fa-brands fa-whatsapp"></i> - 1178642022
 
         </p>
 
@@ -52,8 +52,69 @@
 
     <div class="newsletter">
         <h2>Suscribite a nuestro newsletter!</h2>
+      
+      <form id="miFormulario" onsubmit="return validarFormulario()">
+          Nombre: <input type="text" id="nombre" placeholder="Ingresá tu nombre" size="15" maxlength="10" required><br>
+          Apellido: <input type="text" id="apellido" placeholder="Ingresá tu apellido" size="15" maxlength="10" required><br>
+          Email: <input type="email" id="email" placeholder="Ingresá tu mail" size="15" maxlength="10" required><br>
+          Número de Telefono: <input type="number" id="número" placeholder="Ingresá tu número" size="15" maxlength="10" required><br>
+         
+      
+        <function validarFormulario() 
+        {
+          var nombre = document.getElementById("nombre").value;
+          var apellido = document.getElementById("apellido").value;
+          var email = document.getElementById("email").value;
+          var número = document.getElementById("número").value;
+        
+          if (nombre == "") {
+            alert("Por favor, ingresa tu nombre.");
+            return false;
+          }
+      
+          if (apellido == "") {
+            alert("Por favor, ingresa tu apellido.");
+            return false;
+          }
+        
+          if (email == "") {
+            alert("Por favor, ingresa tu email.");
+            return false;
+          } else {
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (!emailRegex.test(email)) {
+              alert("Por favor, ingresa un email válido.");
+              return false;
+            }
+            return true;
+          } 
+          if (número == "") {
+            alert("Por favor, ingresa tu número.");
+            return false;
+          }
+        }
+        
+         <form id="miFormulario" onsubmit="return validarFormulario()">
+      
+        <p>Dejanos tus comentarios:</p>
+                  <textarea placeholder="Ingrese su mensaje..." name="coments" cols="30" rows="10"></textarea> 
+                  <br></br>
+      
+      
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Borrar">
+        </form>
+      
+      </div>
 
-        <form action="link" method="post"> <!-- No se modifca la tipografia como el resto, por no estar el /p-->
+   </body>
+
+</html>
+
+ <!-- <div class="newsletter">   
+        <h2>Suscribite a nuestro newsletter!</h2>
+
+        <form action="link" method="post"> 
             <label for="name">Nombre:</label>
             <input type="text" id="name" placeholder="Ingresá tu nombre" size="15" maxlength="10" required>
             <br><br>
@@ -75,10 +136,4 @@
             <input type="reset" value="Borrar">
         </form>
 
-    </div>
-
-
-
-</body>
-
-</html>
+    </div> 
