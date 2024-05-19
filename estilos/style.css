@@ -64,6 +64,9 @@ li a:hover {
   nav ul li a {
     font-size: 16px;
   }
+  .logog5 {
+    display: none;
+  }
 }
 
 @media (max-width: 858px) {
@@ -95,6 +98,9 @@ li a:hover {
   }
   #check:checked ~ ul {
     left: 0;
+  }
+  .logog5 {
+    display: none;
   }
 }
 
@@ -177,7 +183,7 @@ li a:hover {
   color: var(--verdeClaro);
   font-family: roboto mono;
   font-weight: 300;
-  text-align: justify;
+  text-align: center;
 }
 
 .section-btn {
@@ -195,13 +201,14 @@ li a:hover {
   text-decoration: none;
   text-align: center;
   font-size: 1rem;
-  transition: 0.6s;
+  transition: background-color 0.6s, color 0.6s; 
 }
 
 .button:hover {
-  background-color: var(--verdeOscuro);
-  color: var(--beige);
+  background-color: var(--beige);
+  color: var(--verdeOscuro);
 }
+
 /* Aqui termina style de pagina de productos*/
 
 /* Aqui empieza style de contacto*/
@@ -215,10 +222,14 @@ li a:hover {
 }
 /* Aqui termina style de contacto*/
 
-section {
+/* Aqui empieza style de About*/
+
+.about-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center; 
 }
+
 .about {
   flex-direction: column;
   align-items: center;
@@ -229,7 +240,6 @@ section {
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
 
 .img-about {
   width: 250px;
@@ -253,4 +263,66 @@ section {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center; 
+    background-color: #fff;
+    margin: 0 0 20px;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .img-about {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+
+  .content-about {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .img-about {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+  }
+}
+
+/* Aqui termina style de About*/
