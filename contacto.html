@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Media/image/logoico.ico">
-    <script src="https://kit.fontawesome.com/4c44dac358.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/estilos/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4c44dac358.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="/Media/image/logoico.ico">
+  <link rel="stylesheet" href="estilos/style.css">
     <title> Contacto</title>
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="btncheck">
-                <i class="fas fa-bars"></i>
-            </label>
-
-            <img src="Media/image/LOGO.png" alt="logo" class="logog5">
-
-            <ul>
-                <li><a href="/index.html">INICIO</a></li>
-                <li><a href="/about.html">SOBRE NOSOTROS</a></li>
-                <li><a href="/producto.html">PRODUCTOS</a></li>
-                <li><a href="/contacto.html">CONTACTO</a></li>
-            </ul>
-
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="btncheck">
+          <i class="fas fa-bars"></i>
+      </label>
+      
+          <img src="Media/image/LOGO.png" alt="logo" class="logog5">
+      
+          <ul>
+              <li><a href="/index.html">INICIO</a></li>
+              <li><a href="/about.html">SOBRE NOSOTROS</a></li>
+              <li><a href="/producto.html">PRODUCTOS</a></li>
+              <li><a href="/contacto.html">CONTACTO</a></li>
+          </ul>
+      
+  </nav>
+  </header>
 
     <div class="contacto">
         <h1>Contacto</h1>
@@ -40,11 +40,11 @@
         <h2>Redes sociales</h2>
 
         <p> Podes seguirnos en nuestras redes para ver más contenido
-            <a href="https://www.facebook.com/">Facebook </a> Y
-            <a href="https://www.instagram.com/">Instagram </a>
+            <a href="https://www.facebook.com/">Facebook </a>  <i class="fa-brands fa-facebook"></i> Y
+            <a href="https://www.instagram.com/">Instagram  <i class="fa-brands fa-instagram"></i> </a>
 
             <br>
-            Nuestro número para contacto por Whatsapp - 1178642022
+            Nuestro número para contacto por Whatsapp <i class="fa-brands fa-whatsapp"></i> - 1178642022
 
         </p>
 
@@ -52,37 +52,67 @@
 
     <div class="newsletter">
         <h2>Suscribite a nuestro newsletter!</h2>
-
-        <form action="link" method="post"> <!-- No se modifca la tipografia como el resto, por no estar el /p-->
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" placeholder="Ingresá tu nombre" size="15" maxlength="10" required>
-            <br><br>
-            <label for="lastname">Apellido:</label>
-            <input type="text" id="lastname" placeholder="Ingresá tu apellido" size="15" maxlength="10" required>
-            <br><br>
-            <label for="mail">Correo Electronico:</label>
-            <input type="email" id="mail" placeholder="Ingresá tu mail" size="15" maxlength="10" required>
-            <br><br>
-            <label for="phone number">Telefono:</label>
-            <input type="number" id="phone" placeholder="Ingresá tu número" size="15" maxlength="10" required>
-
-
-            <p>Dejanos tus comentarios:</p>
-            <textarea placeholder="Ingrese su mensaje..." name="coments" cols="30" rows="10"></textarea>
-
-            <br><br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
+      
+      <form id="miFormulario" onsubmit="return validarFormulario()">
+          Nombre: <input type="text" id="nombre" placeholder="Ingresá tu nombre" size="15" maxlength="10" required><br>
+          Apellido: <input type="text" id="apellido" placeholder="Ingresá tu apellido" size="15" maxlength="10" required><br>
+          Email: <input type="email" id="email" placeholder="Ingresá tu mail" size="15" maxlength="10" required><br>
+          Número de Telefono: <input type="number" id="número" placeholder="Ingresá tu número" size="15" maxlength="10" required><br>
+         
+      
+        <function validarFormulario() 
+        {
+          var nombre = document.getElementById("nombre").value;
+          var apellido = document.getElementById("apellido").value;
+          var email = document.getElementById("email").value;
+          var número = document.getElementById("número").value;
+        
+          if (nombre == "") {
+            alert("Por favor, ingresa tu nombre.");
+            return false;
+          }
+      
+          if (apellido == "") {
+            alert("Por favor, ingresa tu apellido.");
+            return false;
+          }
+        
+          if (email == "") {
+            alert("Por favor, ingresa tu email.");
+            return false;
+          } else {
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (!emailRegex.test(email)) {
+              alert("Por favor, ingresa un email válido.");
+              return false;
+            }
+            return true;
+          } 
+          if (número == "") {
+            alert("Por favor, ingresa tu número.");
+            return false;
+          }
+        }
+        
+         <form id="miFormulario" onsubmit="return validarFormulario()">
+      
+        <p>Dejanos tus comentarios:</p>
+                  <textarea placeholder="Ingrese su mensaje..." name="coments" cols="30" rows="10"></textarea> 
+                  <br></br>
+      
+      
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Borrar">
         </form>
-
-    </div>
-    <footer>
+      
+      </div>
+      <footer>
         <section id="boxes">
           <div class="wpp">
             <i class="fa-brands fa-whatsapp"></i>
             <h3>Nuestro número</h3>
             <p>2212233333</p>
-
+  
           </div>
           <div class="change">
             <i class="fa-solid fa-arrow-rotate-left"></i>
@@ -94,7 +124,7 @@
             <h3>Sitio seguro</h3>
             <p>Protejemos tus datos</p>
           </div>
-
+  
         </section>
         <section>
             <div>
@@ -117,13 +147,45 @@
                     <i class="fa-brands fa-square-instagram"></i>
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-square-x-twitter"></i>
-
+  
                 </div>
-
+  
             </div>
         </div>
           <p class="copy">&copy; 2024 mi tienda web</p>
     </footer>
+    
+   </body>
+
+
+</html>
+
+ <!-- <div class="newsletter">   
+        <h2>Suscribite a nuestro newsletter!</h2>
+
+        <form action="link" method="post"> 
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Ingresá tu nombre" size="15" maxlength="10" required>
+            <br><br>
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" placeholder="Ingresá tu apellido" size="15" maxlength="10" required>
+            <br><br>
+            <label for="mail">Correo Electronico:</label>
+            <input type="email" id="mail" placeholder="Ingresá tu mail" size="15" maxlength="10" required>
+            <br><br>
+            <label for="phone number">Telefono:</label>
+            <input type="number" id="phone" placeholder="Ingresá tu número" size="15" maxlength="10" required>
+
+
+            <p>Dejanos tus comentarios:</p>
+            <textarea placeholder="Ingrese su mensaje..." name="coments" cols="30" rows="10"></textarea>
+
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+
+    </div>
 
 
 

@@ -286,12 +286,16 @@ font-size: 30px;
 /* Aqui empieza style de contacto*/
 .contacto {
   font-family: roboto mono;
-  background-color: blanchedalmond;
+  background: var(--verdeClaro);
+  color: var(--beige);
+  padding: 0px
 }
 .newsletter {
   font-family: roboto mono;
-  background-color: blanchedalmond;
-}
+  background: var(--verdeClaro);
+  color: var(--beige);
+  padding-bottom: 5px;
+  }
 /* Aqui termina style de contacto*/
 
 /* Aqui empieza style de About*/
