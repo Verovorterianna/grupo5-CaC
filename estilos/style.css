@@ -14,7 +14,7 @@
 }
 
 /*estilos index*/
-body{
+body {
   background-color: var(--beige);
 }
 
@@ -115,85 +115,122 @@ li a:hover {
   font-size: 8vh;
   text-shadow: 1px 1px 2px black, 0 0 5px rgb(19, 19, 19);
   font-style: oblique;
-  
-
 }
- .newcollection h1 {
+.newcollection h1 {
   text-align: center;
   padding: 50px 50px;
 }
-#categories{
+#categories {
   text-align: center;
   padding: 20px 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: large;
 }
-#products{
-  display:flex;
+#products {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
-
 }
-#products h4{
+#products h4 {
   background-color: #606c38;
-  padding:10px;
-  border-radius:5px ;
+  padding: 10px;
+  border-radius: 5px;
   font-size: 20px;
 }
-#products h4:hover{
+#products h4:hover {
   background-color: #41601e;
-  
-}
-#boxes{
-  display:grid;
-  grid-template-columns: auto auto auto;
-  padding: 50px;
-}
-.change{
-  border-left: rgb(238, 201, 131) solid;
-  border-right: rgb(238, 201, 131) solid;
-}
-#boxes div{
-  height: 20vh;
-  width: 30vw;
-  padding: 10px;
-}
-#boxes i{
-padding: 5px 50px 15px 50px;
-color:var(--verdeOscuro);
-font-weight:700;
-font-size: 30px;
-}
-#boxes h3 {
-  padding:10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#boxes p{
-  padding:5px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.copy{
-  text-align: center;
 
+  /* Estilos para footer */
 }
-#footer{
+#boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+#boxes .wpp,
+#boxes .change,
+#boxes .secure {
+  text-align: center;
+}
+
+#boxes i {
+  font-size: 30px;
+}
+
+#boxes h3,
+#boxes p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #boxes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+@media screen and (max-width: 480px) {
+  #boxes {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  #boxes .wpp,
+  #boxes .change,
+  #boxes .secure {
+    font-size: 14px;
+  }
+
+  #boxes i {
+    font-size: 20px;
+  }
+}
+
+.copy {
+  text-align: center;
+  margin: 30px;
+}
+
+#footer {
   display: flex;
   justify-content: space-around;
   font-family: roboto mono;
   background-color: blanchedalmond;
+  padding: 20px 0;
+  text-align: center;
 }
-#footer h3{
+
+#footer h3 {
   text-align: center;
   margin-bottom: 10px;
 }
-.socialMedia i{
-   margin:10px;
-   font-size: 30px;
+
+.socialMedia i {
+  margin: 10px;
+  font-size: 30px;
 }
-.copy{
-  margin:30px;
+
+@media screen and (max-width: 768px) {
+  #footer .suscribirse,
+  #footer .redes {
+    flex: 1 1 100%;
+  }
 }
+
+@media screen and (max-width: 480px) {
+  #footer {
+    flex-direction: column;
+  }
+
+  #footer .suscribirse,
+  #footer .redes {
+    flex: 1 1 auto;
+    margin: 10px 0;
+  }
+}
+
 /* style de pagina de productos empieza aqui*/
 
 .banner {
@@ -273,7 +310,7 @@ font-size: 30px;
   text-decoration: none;
   text-align: center;
   font-size: 1rem;
-  transition: background-color 0.6s, color 0.6s; 
+  transition: background-color 0.6s, color 0.6s;
 }
 
 .button:hover {
@@ -297,7 +334,7 @@ font-size: 30px;
   color: var(--verdeOscuro);
   padding-bottom: 10px;
   margin: 20px;
-  }
+}
 /* Aqui termina style de contacto*/
 
 /* Aqui empieza style de About*/
@@ -305,7 +342,7 @@ font-size: 30px;
 .about-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .about {
@@ -340,24 +377,22 @@ font-size: 30px;
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  margin-bottom: 20px; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .about-container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
   }
 
   .about {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     background-color: #fff;
     margin: 0 0 20px;
     width: 90%;
@@ -376,14 +411,12 @@ font-size: 30px;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-
-
 
 @media only screen and (max-width: 480px) {
   .about-container {
