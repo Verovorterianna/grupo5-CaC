@@ -206,10 +206,25 @@ li a:hover {
   text-align: center;
   margin-bottom: 10px;
 }
+#boxes i{
+  color:#283618;
+}
+#boxes i:hover{
+  transform: scale(2,2);
+  color: #41601e;
+
+}
+
+
 
 .socialMedia i {
   margin: 10px;
   font-size: 30px;
+  color:rgb(27, 27, 203);
+}
+.socialMedia i:hover{
+    color:blue;
+    transform: scale(1.5, 1.5);
 }
 
 @media screen and (max-width: 768px) {
