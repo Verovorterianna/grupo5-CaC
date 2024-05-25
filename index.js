@@ -33,4 +33,3 @@ document.getElementById('miFormulario').addEventListener('submit', function(even
           }
         }
     )
-    
